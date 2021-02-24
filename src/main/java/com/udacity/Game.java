@@ -156,25 +156,33 @@ public class Game {
                             grid[1][0] == grid[1][1] && grid[1][1] == grid[1][2] && grid[1][0] == 'x' ||
                             grid[2][0] == grid[2][1] && grid[2][1] == grid[2][2] && grid[2][0] == 'x') {
                         result = "X wins";
+                        System.out.println("X wins");
 
                     } else if (grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0] && grid[0][0] == 'x' ||
                             grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1] && grid[0][1] == 'x' ||
                             grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2] && grid[0][2] == 'x') {
                         result = "X wins";
+                        System.out.println("X wins");
+
                     } else if (grid[0][0] == grid[0][1] && grid[0][1] == grid[0][2] && grid[0][0] == 'o' ||
                             grid[1][0] == grid[1][1] && grid[1][1] == grid[1][2] && grid[1][0] == 'o' ||
                             grid[2][0] == grid[2][1] && grid[2][1] == grid[2][2] && grid[2][0] == 'o') {
                         result = "O wins";
+                        System.out.println("O wins");
+
                     } else if (grid[0][0] == grid[1][0] && grid[1][0] == grid[2][0] && grid[0][0] == 'o' ||
                             grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1] && grid[0][1] == 'o' ||
                             grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2] && grid[0][2] == 'o') {
                         result = "O wins";
+                        System.out.println("O wins");
                     } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] == 'x' ||
                             grid[2][0] == grid[1][1] && grid[1][1] == grid[0][2] && grid[2][0] == 'x') {
                         result = "X wins";
+                        System.out.println("X wins");
                     } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] == 'o' ||
                             grid[2][0] == grid[1][1] && grid[1][1] == grid[0][2] && grid[2][0] == 'o') {
                         result = "O wins";
+                        System.out.println("O wins");
                     } else {
 
                         int populated_count = 0;
@@ -189,6 +197,7 @@ public class Game {
                         }
                         if (populated_count == 9) {
                             result = "Tie";
+                            System.out.println("Tie");
                         }
 
                     }

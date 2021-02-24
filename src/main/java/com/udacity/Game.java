@@ -150,7 +150,7 @@ public class Game {
      */
     public String checkGameWinner(char [][]grid) {
         String result = "None";
-        //Student code goes here ...
+
 
                     if (grid[0][0] == grid[0][1] && grid[0][1] == grid[0][2] && grid[0][0] == 'x' ||
                             grid[1][0] == grid[1][1] && grid[1][1] == grid[1][2] && grid[1][0] == 'x' ||
@@ -169,14 +169,29 @@ public class Game {
                             grid[0][1] == grid[1][1] && grid[1][1] == grid[2][1] && grid[0][1] == 'o' ||
                             grid[0][2] == grid[1][2] && grid[1][2] == grid[2][2] && grid[0][2] == 'o') {
                         result = "O wins";
-                    } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][0] && grid[0][0] == 'x' ||
+                    } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] == 'x' ||
                             grid[2][0] == grid[1][1] && grid[1][1] == grid[0][2] && grid[2][0] == 'x') {
                         result = "X wins";
-                    } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][0] && grid[0][0] == 'o' ||
+                    } else if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] == 'o' ||
                             grid[2][0] == grid[1][1] && grid[1][1] == grid[0][2] && grid[2][0] == 'o') {
                         result = "O wins";
-                    }
+                    } else {
 
+                        int populated_count = 0;
+                        for (int i = 0; i < 3; i++)
+                        {
+                            for (int j = 0; j< 3; j++)
+                            {
+                                if ( grid[i][j] == 'o' || grid[i][j] =='x' ) {
+                                    populated_count = populated_count + 1;
+                                }
+                            }
+                        }
+                        if (populated_count == 9) {
+                            result = "Tie";
+                        }
+
+                    }
 
             return result;
 
